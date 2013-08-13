@@ -71,8 +71,8 @@
 <h3>win8中的单元测试</h3>
 <p>微软没有提供单元测试框架，所以在开发中使用<a href="http://qunitjs.com/">Qunit</a>进行单元测试。有个针对win8的变体<a href="http://qunitmetro.github.io/QUnitMetro/">QUnitMetro</a>。</p>
 <p>vs2012通过NuGet提供QUnitMetro的安装：</p>
-<p><img src="imgs/qunitmetro_setup.png" alt="qunitmetro_setup" title="qunitmetro_setup"></p>
-<p>安装QUnitMetro有一点需要注意，<em>在开始页面需要手动添加测试js文件的链接</em>，其它页面是自动加载，但default.html不会。</p>
+<p><img src="/imgs/qunitmetro_setup.png" alt="qunitmetro_setup" title="qunitmetro_setup"></p>
+<p>安装QUnitMetro有一点需要注意，<em>在开始页面(default.html)需要手动添加测试js文件</em>，其它页面是自动加载，但default.html不会。</p>
 <figure class="highlight lang-html"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -102,7 +102,13 @@
 </pre></td></tr></table></figure>
 
 
-<p>每一个test函数调用代表一个测试，断言的说明请参考Qunit的文档说明。</p>
+<p>每一个test函数调用代表一个测试，断言的说明请参考Qunit的<a href="http://qunitjs.com/cookbook/">文档说明</a>。</p>
+<p>在开始编写测试时，我面临以下问题：</p>
+<ul>
+<li>异步代码如何进行单元测试？</li>
+<li>如何让测试透明？</li>
+<li>都测试哪些代码？</li>
+</ul>
 
       
     </div>
